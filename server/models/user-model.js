@@ -5,7 +5,6 @@ const UserSchema = new Schema({
     password: {type: String, required: true},
     isActivated: {type: Boolean, default: false},
     activationLink: {type: String},
-    products: [ {type: Schema.Types.ObjectId, ref: 'Card'} ]
 })
 
 module.exports = model('User', UserSchema);

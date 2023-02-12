@@ -7,7 +7,7 @@ const router = require('./router/index')
 const cardRouter = require('./router/products-router/card-router')
 const errorMiddleware = require('./middlewares/error-middleware');
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const app = express()
 
 app.use(express.json());
