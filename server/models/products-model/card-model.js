@@ -9,7 +9,7 @@ const CardSchema = new Schema({
   currency: { type: String, required: true },
   balance: { type: Number, required: true },
   moneyback: { type: Number },
-  cvv: { type: Number, required: true },
+  cvv: { type: String, required: true },
   iban: { type: String, default: 'XX000000000130004020131314563464' }
 });
 

@@ -12,9 +12,9 @@ class CardController {
 
   async getAll(req, res) {
     try {
-      const card = await CardService.getAll(req.params.user_id);
+      const cards = await CardService.getAll(req.params.user_id);
       console.log(req.params.user_id)
-      return res.json(card);
+      return res.json(cards);
     } catch (e) {
       res.status(500).json(e);
     }
