@@ -1,32 +1,32 @@
 const CreditModel = require('../../models/products-model/credit-model');
 
 class CreditService {
-  async create(card) {
-    const createdCard = await CreditModel.create(card);
-    return createdCard;
+  async create(credit) {
+    const createdCredit = await CreditModel.create(credit);
+    return createdCredit;
   }
 
   async getAll(user_id) {
-    const cards = await CreditModel.find({ user_id });
-    return cards;
+    const credit = await CreditModel.find({ user_id });
+    return credit;
   }
 
   async getOne(id) {
     if (!id) throw new Error('Id не найден');
-    const card = await CreditModel.findById(id);
-    return card;
+    const credit = await CreditModel.findById(id);
+    return credit;
   }
 
   async update(card) {
-    if (!card._id) throw new Error('Id не найден');
-    const updateCard = await CreditModel.findByIdAndUpdate(card._id, card, { new: true });
-    return updateCard;
+    if (!credit._id) throw new Error('Id не найден');
+    const updateCredit = await CreditModel.findByIdAndUpdate(credit._id, credit, { new: true });
+    return updateCredit;
   }
 
   async delete(id) {
     if (!id) throw new Error('Id не найден');
-    const card = await CreditModel.findByIdAndDelete(id);
-    return card;
+    const credit = await CreditModel.findByIdAndDelete(id);
+    return credit;
   }
 }
 

@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const router = require('./router/index');
 const cardRouter = require('./router/products-router/card-router');
 const creditRouter = require('./router/products-router/credit-router');
+const depositRouter = require('./router/products-router/deposit-router')
 const errorMiddleware = require('./middlewares/error-middleware');
 
 const PORT = process.env.PORT || 3000;
@@ -22,6 +23,7 @@ app.use(
 app.use('/api', router);
 app.use('/products', cardRouter);
 app.use('/products', creditRouter);
+app.use('/products', depositRouter);
 app.use(errorMiddleware);
 
 const start = async () => {
