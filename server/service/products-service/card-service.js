@@ -17,9 +17,9 @@ class CardService {
     return card;
   }
 
-  async update(card) {
-    if (!card._id) throw new Error('Id не найден');
-    const updateCard = await CardModel.findByIdAndUpdate(card._id, card, { new: true });
+  async update(id, card) {
+    if (!id) throw new Error('Id не найден');
+    const updateCard = await CardModel.findByIdAndUpdate(id, card, { new: true });
     return updateCard;
   }
 

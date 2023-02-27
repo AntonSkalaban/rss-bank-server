@@ -17,9 +17,9 @@ class CreditService {
     return credit;
   }
 
-  async update(card) {
-    if (!credit._id) throw new Error('Id не найден');
-    const updateCredit = await CreditModel.findByIdAndUpdate(credit._id, credit, { new: true });
+  async update(id, credit) {
+    if (!id) throw new Error('Id не найден');
+    const updateCredit = await CreditModel.findByIdAndUpdate(id, credit, { new: true });
     return updateCredit;
   }
 

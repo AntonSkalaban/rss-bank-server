@@ -31,7 +31,7 @@ class CreditController {
 
   async update(req, res) {
     try {
-      const updateCredit = await CreditService.update(req.body);
+      const updateCredit = await CreditService.update(req.params.id, req.body);
       return res.json(updateCredit);
     } catch (e) {
       res.status(500).json(e.message);
