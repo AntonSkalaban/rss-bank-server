@@ -2,6 +2,7 @@ const HistoryModel = require('../../models/products-model/history-model');
 
 class HistoryService {
   async create(card) {
+    console.log(card)
     const createdCard = await HistoryModel.create(card);
     return createdCard;
   }

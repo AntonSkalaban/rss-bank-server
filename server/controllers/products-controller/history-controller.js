@@ -4,6 +4,7 @@ class HistoryController {
   async create(req, res) {
     try {
       const history = await HistoryService.create(req.body);
+      console.log(req.body)
       res.json(history);
     } catch (e) {
       res.status(500).json(e);

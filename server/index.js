@@ -25,7 +25,7 @@ app.use('/api', router);
 app.use('/products', cardRouter);
 app.use('/products', creditRouter);
 app.use('/products', depositRouter);
-app.use('/history', historyRouter);
+app.use('/products', historyRouter);
 app.use(errorMiddleware);
 
 const start = async () => {
