@@ -3,10 +3,10 @@ const HistoryController = require('../../controllers/products-controller/history
 
 const historyRouter = new Router();
 
-creditRouter.post('/history', CreditController.create);
-creditRouter.get('/history/:user_id', CreditController.getAll);
-creditRouter.get('/history/:id', CreditController.getOne);
-creditRouter.put('/history/:id', CreditController.update);
-creditRouter.delete('/history/:id', CreditController.delete);
+creditRouter.post('/history', HistoryController.create);
+creditRouter.get('/history/:user_id', HistoryController.getAll);
+creditRouter.get('/history/:id', HistoryController.getOne);
+creditRouter.put('/history/:id', HistoryController.update);
+creditRouter.delete('/history/:id', HistoryController.delete);
 
 module.exports = historyRouter;
